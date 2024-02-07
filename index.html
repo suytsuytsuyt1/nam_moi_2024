@@ -87,13 +87,12 @@
 
     /* swiper */
 
-    swiper-container {
+    swiper-container{
       width: 280px;
       height: 360px;
       position: absolute;
       z-index: -10;
     }
-
     @media all and (max-width: 600px) {
       swiper-container {
       width: 220px;
@@ -101,8 +100,6 @@
     }
     }
 
-
-    
     swiper-slide {
       display: flex;
       align-items: center;
@@ -110,7 +107,6 @@
       border-radius: 18px;
       font-size: 22px;
       font-weight: bold;
-      ;
     }
 
     swiper-slide:nth-child(1) {
@@ -134,36 +130,65 @@
     swiper-slide:nth-child(2n) {
       background:url(background-tet-23.jpg);
       background-size: cover;
+      background-position-y: -10px;
+      font-family: 'Dancing Script', cursive;
+      color: #f80a2e;
+      text-align: center;
+      font-size:30px;
+      
     }
 
     swiper-slide:nth-child(3n) {
       background:url(background_5.jpg);
       background-size: cover;
+      font-family: 'Dancing Script', cursive;
+      color: #f80a2e;
+      text-align: center;
+      font-size:30px;
     
     }
 
     swiper-slide:nth-child(4n) {
       background:url(backgrounf_4.jpg);
       background-size: cover;
+      font-family: 'Dancing Script', cursive;
+      color: #e0f80a;
+      text-align: center;
+      font-size:30px;
     }
 
     swiper-slide:nth-child(5n) {
       background:url(background_6.png);
       background-size: cover;
+      font-family: 'Dancing Script', cursive;
+      color: #f80a22;
+      text-align: center;
+      font-size:30px;
     }
 
     swiper-slide:nth-child(6n) {
       background:url(background_3.jpg);
       background-size: cover;
+      font-family: 'Dancing Script', cursive;
+      color: #e0f80a;
+      text-align: center;
+      font-size:30px;
     }
 
     swiper-slide:nth-child(7n) {
       background:url(background_5.jpg);
       background-size: cover;
+      font-family: 'Dancing Script', cursive;
+      color: #f80a0a;
+      text-align: center;
+      font-size:40px;
     }
 
     swiper-slide:nth-child(8n) {
       background-color: rgb(0, 68, 255);
+      color: #e0f80a;
+      text-align: center;
+      font-size:30px;
     }
 
     swiper-slide:nth-child(9n) {
@@ -197,14 +222,16 @@
       <p>Mới</p>
       <img src="85a92a_2e832761c76d449995b82275c792715a~mv2.gif" alt="">
     </swiper-slide>
-    <swiper-slide>Slide 2</swiper-slide>
-    <swiper-slide>Slide 3</swiper-slide>
-    <swiper-slide>Slide 4</swiper-slide>
-    <swiper-slide>Slide 5</swiper-slide>
-    <swiper-slide>Slide 6</swiper-slide>
-    <swiper-slide>Slide 7</swiper-slide>
-    <swiper-slide>Slide 8</swiper-slide>
-    <swiper-slide>
+    <swiper-slide >Lại một năm nữa<br> đến rồi<br> Chúc <br> bà chj  mik</swiper-slide>
+    <swiper-slide >luôn luôn lạc quan</swiper-slide>
+    <swiper-slide > vui vẻ yêu đời</swiper-slide>
+    <swiper-slide >sức khỏe vô biên <br>hạnh phúc triền miên</swiper-slide>
+    <swiper-slide >ngày càng xinh đẹp <br> Lấy được chồng hiền</swiper-slide>
+    <swiper-slide >Nha !!!!</swiper-slide>
+
+
+    <swiper-slide > Đừng vội đừng vội , 😜😜😜 <br> ------>> <br> Donate bên cạch 😜😜</r></swiper-slide>
+    <swiper-slide >
       <div>
         <img src="qr.jpg" alt="">
       </div>
@@ -220,26 +247,29 @@
         var left = document.querySelector('.slide-card-left');
         var rigth = document.querySelector('.slide-card-rigth');
         var click_btn = document.querySelector('.click');
-        var cart = document.querySelector('.slide-card');
+        var swiper = document.querySelector('.mySwiper')
 
         left.style.transform = 'translateX(-20%)';
         left.style.transition = 'all 2s';
         left.style.opacity = '0';
+        left.style.zIndex = '-100';
        
         
         rigth.style.transform = 'translatex(20%)';
         rigth.style.transition = ' all 2s';
         rigth.style.opacity = '0';
+        rigth.style.zIndex = '-100';
       
 
         click_btn.style.transform = 'all 2s';
         click_btn.style.opacity = '0';
         click_btn.style.zIndex = '-100';
 
-        cart.style.zIndex = '10';
-    }
-    );
-</script>
+        swiper.style.zIndex = '10'
 
+             
+    })
+
+</script>
 
 </html>
