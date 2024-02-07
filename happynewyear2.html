@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Chuc mung nam moi
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+  <style>
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+      background: linear-gradient(20deg,#f90707, #f5f215);
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    /* Slideshow container */
+
+    .slide-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 350px;
+    position: relative;
+    overflow: hidden;
+
+    }
+    .slide-card-left{   
+        background-size:cover;
+        width: 280px;
+        height: 350px;
+        position: relative;
+        background-image: url(nua_1.jpg);
+        background-position-x: right;
+
+    }
+    .slide-card-rigth{
+        
+        background-size: cover;
+        width: 250px;
+        height: 350px;
+        position: relative;
+        background-image: url(nua_2.jpg);
+        background-position-x: left;
+    }
+    .click{
+        width: 35px;
+        height: 35px;
+        background:url(click.gif);
+        background-size: cover;
+        position: absolute;
+        border-radius: 40%;
+    }
+    @media all and (max-width:600px) {
+
+        .slide-card{
+            width: 250px;
+            height: 300px;
+        }
+        
+    }
+
+
+
+
+
+
+
+    /* swiper */
+
+    swiper-container {
+      width: 280px;
+      height: 360px;
+      position: absolute;
+      z-index: -10;
+    }
+
+    @media all and (max-width: 600px) {
+      swiper-container {
+      width: 220px;
+      height: 300px;
+    }
+    }
+
+
+    
+    swiper-slide {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 18px;
+      font-size: 22px;
+      font-weight: bold;
+      ;
+    }
+
+    swiper-slide:nth-child(1) {
+      background:url(pngtree-background-design-of-red-firecracker-fortune-character-border-frame-png-image_542443.jpg);
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      font-family: 'Dancing Script', cursive;
+      color: #e9f902;
+      font-size:25px;
+      position: relative;
+    }
+    swiper-slide:nth-child(1)>img{
+      position:absolute;
+      width:40%;
+      right: 0;
+      top: 20%;
+    }
+
+
+    swiper-slide:nth-child(2n) {
+      background:url(background-tet-23.jpg);
+      background-size: cover;
+    }
+
+    swiper-slide:nth-child(3n) {
+      background:url(background_5.jpg);
+      background-size: cover;
+    
+    }
+
+    swiper-slide:nth-child(4n) {
+      background:url(backgrounf_4.jpg);
+      background-size: cover;
+    }
+
+    swiper-slide:nth-child(5n) {
+      background:url(background_6.png);
+      background-size: cover;
+    }
+
+    swiper-slide:nth-child(6n) {
+      background:url(background_3.jpg);
+      background-size: cover;
+    }
+
+    swiper-slide:nth-child(7n) {
+      background:url(background_5.jpg);
+      background-size: cover;
+    }
+
+    swiper-slide:nth-child(8n) {
+      background-color: rgb(0, 68, 255);
+    }
+
+    swiper-slide:nth-child(9n) {
+      background-color: rgb(218, 12, 218);
+    }
+    swiper-slide:nth-child(9n)>div{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    swiper-slide:nth-child(9n)>div>img{
+      width:100%;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="slide-card">
+    <div class="slide-card-left"></div>
+    <div class="slide-card-rigth"></div>
+  
+
+  <swiper-container class="mySwiper" effect="cards" grab-cursor="true">
+    <swiper-slide>
+      <p>Chúc</p>
+      <p>Mừng</p>
+      <p>Năm </p>
+      <p>Mới</p>
+      <img src="85a92a_2e832761c76d449995b82275c792715a~mv2.gif" alt="">
+    </swiper-slide>
+    <swiper-slide>Slide 2</swiper-slide>
+    <swiper-slide>Slide 3</swiper-slide>
+    <swiper-slide>Slide 4</swiper-slide>
+    <swiper-slide>Slide 5</swiper-slide>
+    <swiper-slide>Slide 6</swiper-slide>
+    <swiper-slide>Slide 7</swiper-slide>
+    <swiper-slide>Slide 8</swiper-slide>
+    <swiper-slide>
+      <div>
+        <img src="qr.jpg" alt="">
+      </div>
+    </swiper-slide>
+  </swiper-container>
+
+  <div class="click"></div>
+</div>
+</body>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+  <script>
+    document.querySelector('.click').addEventListener('click',function(){
+        var left = document.querySelector('.slide-card-left');
+        var rigth = document.querySelector('.slide-card-rigth');
+        var click_btn = document.querySelector('.click');
+        var cart = document.querySelector('.slide-card');
+
+        left.style.transform = 'translateX(-20%)';
+        left.style.transition = 'all 2s';
+        left.style.opacity = '0';
+       
+        
+        rigth.style.transform = 'translatex(20%)';
+        rigth.style.transition = ' all 2s';
+        rigth.style.opacity = '0';
+      
+
+        click_btn.style.transform = 'all 2s';
+        click_btn.style.opacity = '0';
+        click_btn.style.zIndex = '-100';
+
+        cart.style.zIndex = '10';
+    }
+    );
+</script>
+
+
+</html>
