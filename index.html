@@ -250,16 +250,17 @@
         var click_btn = document.querySelector('.click');
         var swiper = document.querySelector('.mySwiper')
 
-        left.style.transform = 'translateX(-20%)';
+        left.style.transform = 'translateX(-100%)';
         left.style.transition = 'all 2s';
         left.style.opacity = '0';
            
-        rigth.style.transform = 'translatex(20%)';
+        rigth.style.transform = 'translatex(100%)';
         rigth.style.transition = ' all 2s';
         rigth.style.opacity = '0';
         
         click_btn.style.transition= 'all 2s';
         click_btn.style.opacity = '0';
+        click_btn.style.zIndex = '-100'
 
         setTimeout(function(){
           left.style.display = 'block';
