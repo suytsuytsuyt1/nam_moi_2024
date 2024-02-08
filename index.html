@@ -42,7 +42,6 @@
     height: 350px;
     position: relative;
     overflow: hidden;
-
     }
     .slide-card-left{   
         background-size:cover;
@@ -51,6 +50,7 @@
         position: relative;
         background-image: url(nua_1.jpg);
         background-position-x: right;
+        z-index: 5;
 
     }
     .slide-card-rigth{
@@ -61,6 +61,7 @@
         position: relative;
         background-image: url(nua_2.jpg);
         background-position-x: left;
+        z-index: 5;
     }
     .click{
         width: 35px;
@@ -69,6 +70,7 @@
         background-size: cover;
         position: absolute;
         border-radius: 40%;
+        z-index: 6;
     }
     @media all and (max-width:600px) {
 
@@ -91,7 +93,6 @@
       width: 280px;
       height: 360px;
       position: absolute;
-      z-index: -10;
     }
     @media all and (max-width: 600px) {
       swiper-container {
@@ -252,22 +253,21 @@
         left.style.transform = 'translateX(-20%)';
         left.style.transition = 'all 2s';
         left.style.opacity = '0';
-        left.style.zIndex = '-100';
-       
-        
+           
         rigth.style.transform = 'translatex(20%)';
         rigth.style.transition = ' all 2s';
         rigth.style.opacity = '0';
-        rigth.style.zIndex = '-100';
-      
-
-        click_btn.style.transform = 'all 2s';
+        
+        click_btn.style.transition= 'all 2s';
         click_btn.style.opacity = '0';
-        click_btn.style.zIndex = '-100';
 
-        swiper.style.zIndex = '10'
+        setTimeout(function(){
+          left.style.display = 'block';
+          rigth.style.display = 'block';
+          click_btn.style.display = 'block';
+        },2000)
 
-             
+                 
     })
 
 </script>
