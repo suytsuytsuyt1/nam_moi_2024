@@ -87,7 +87,7 @@
 
 
 
-    /* swiper */
+    /* --------------swiper------------- */
 
     swiper-container{
       width: 280px;
@@ -126,6 +126,17 @@
       right: 0;
       top: 20%;
     }
+    #chi_dan{
+      width: 35px;
+      height: 35px;
+      position: absolute;
+      background-image: url(buy.gif);
+      background-size: cover;
+      border-radius: 40%;
+      bottom: 10%;
+      left: 10%;
+    }
+  
 
 
     swiper-slide:nth-child(2n) {
@@ -205,6 +216,13 @@
       width:100%;
     }
 
+       /* -------------nhạc------------- */
+       audio{
+        z-index: -100;
+        position: absolute;
+        opacity: 0;
+       }
+
   </style>
 </head>
 
@@ -222,6 +240,8 @@
       <p>Năm </p>
       <p>Mới</p>
       <img src="85a92a_2e832761c76d449995b82275c792715a~mv2.gif" alt="">
+      <div id="chi_dan">
+      </div>
     </swiper-slide>
     <swiper-slide >Lại một năm nữa<br> đến rồi<br> Chúc <br> bà chj  mik</swiper-slide>
     <swiper-slide >luôn luôn lạc quan</swiper-slide>
@@ -240,6 +260,10 @@
   </swiper-container>
 
   <div class="click"></div>
+
+  <audio class="play_audio" controls autoplay loop>
+    <source src="y2mate.com - Tết Đong Đầy  Kay Trần x Nguyễn Khoa x Duck V x Homieboiz Ness Mix.mp3" type="">
+  </audio>
 </div>
 </body>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
@@ -249,26 +273,28 @@
         var rigth = document.querySelector('.slide-card-rigth');
         var click_btn = document.querySelector('.click');
         var swiper = document.querySelector('.mySwiper')
+        var click_play = document.querySelector('.play_audio');
 
         left.style.transform = 'translateX(-100%)';
-        left.style.transition = 'all 2s';
+        left.style.transition = 'all 3s';
         left.style.opacity = '0';
            
         rigth.style.transform = 'translatex(100%)';
-        rigth.style.transition = ' all 2s';
+        rigth.style.transition = ' all 3s';
         rigth.style.opacity = '0';
         
-        click_btn.style.transition= 'all 2s';
+        click_btn.style.transition= 'all 3s';
         click_btn.style.opacity = '0';
         click_btn.style.zIndex = '-100'
 
+        click_play.play();
+
+       
         setTimeout(function(){
           left.style.display = 'block';
           rigth.style.display = 'block';
           click_btn.style.display = 'block';
-        },2000)
-
-                 
+        },2000)         
     })
 
 </script>
